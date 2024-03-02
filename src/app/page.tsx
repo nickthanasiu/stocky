@@ -1,18 +1,15 @@
 import Link from "next/link";
+import { LoginButton, LogoutButton } from "./auth";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <nav>
+        <LoginButton />
+        <LogoutButton />
         <Link href="/dashboard">Dashboard</Link>
+        <Link href="/api/auth/signin">Sign In</Link>
       </nav>        
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <p>main content</p>
-        <p>goes</p>
-        <p>in</p>
-        <p>here</p>
-      </div>
     </main>
   );
 }
